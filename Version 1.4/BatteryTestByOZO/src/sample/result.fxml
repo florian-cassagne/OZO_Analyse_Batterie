@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vBoxResult" prefHeight="431.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ResultController">
+   <children>
+       <Text fx:id="clientNameResult" text="%clientName" wrappingWidth="150.0" />
+       <Text fx:id="batteryNameResult" text="%batteryName" />
+       <Text fx:id="amperage" text="%dischargePower" wrappingWidth="150.0" />
+       <Text fx:id="voltageFinal" text="%cutOffVoltage" wrappingWidth="227.0" />
+       <Text fx:id="ampHoursFinal" text="%capacity" wrappingWidth="150.0" />
+      <LineChart fx:id="graph">
+        <xAxis>
+          <NumberAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Button fx:id="generatePDF" mnemonicParsing="false" onAction="#generatePDF" text="%generatePdf" />
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>

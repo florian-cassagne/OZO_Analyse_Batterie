@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="%language">
+            <items>
+              <MenuItem fx:id="langageFr" mnemonicParsing="false" onAction="#goToLangageFr" text="%language_fr" />
+                  <MenuItem fx:id="langageEn" mnemonicParsing="false" onAction="#goToLangageEn" text="%language_en" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+       <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="472.0">
+           <children>
+               <Text text="%clientName" wrappingWidth="114.0" />
+               <TextField fx:id="clientName" />
+           </children>
+           <VBox.margin>
+               <Insets left="15.0" right="15.0" top="15.0" />
+           </VBox.margin>
+       </HBox>
+       <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="557.0">
+           <children>
+               <Text text="%batteryName" wrappingWidth="150.0" />
+               <TextField fx:id="batteryName" />
+           </children>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" top="15.0" />
+         </VBox.margin>
+       </HBox>
+       <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
+           <children>
+               <Text text="%data" wrappingWidth="73.0" />
+               <Button fx:id="selectFile" mnemonicParsing="false" onAction="#selectDataFile" text="%fileChoice" />
+           </children>
+           <VBox.margin>
+               <Insets left="15.0" right="15.0" top="15.0" />
+           </VBox.margin>
+       </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#readData" text="%btnContinue" />
+         </children>
+          <VBox.margin>
+              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+          </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
